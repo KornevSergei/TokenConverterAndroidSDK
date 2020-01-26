@@ -1,4 +1,28 @@
 package com.example.tokenconverter;
 
-public class SignInActivity {
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SignInActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sign_up);
+    }
+
+    //опписываем кнопку Назад
+    public void back(View view){
+        Intent intent = new Intent(SignInActivity.this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    //описываем кнопу Регистрации
+    public void signIn(View view){
+        Toast.makeText(getApplicationContext(), "В данный момент регистрация недоступна!", Toast.LENGTH_SHORT).show();
+    }
 }

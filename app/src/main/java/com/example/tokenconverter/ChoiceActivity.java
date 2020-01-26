@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 public class ChoiceActivity extends AppCompatActivity {
 
+    int quantity = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

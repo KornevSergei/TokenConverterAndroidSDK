@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         //делаем проверку на логин и пароль, если всё ок - выводим линный Тост и открываем новую активити
         if (username.getText().toString().equals("Sergei") &&
                 password.getText().toString().equals("0000")) {
-            Toast.makeText(getApplicationContext(), "Вход выполнен!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Вход выполнен", Toast.LENGTH_SHORT).show();
 
             //выполняем переход на другой экран
             Intent intent = new Intent(LoginActivity.this, ChoiceActivity.class);
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
 
             //если данные введены неверное - выводим длинный тост с уведовмлением
         } else {
-            Toast.makeText(getApplicationContext(), "Неправильные данные!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Неверные данные!", Toast.LENGTH_SHORT).show();
 
         }
     }
