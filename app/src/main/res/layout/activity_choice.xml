@@ -12,8 +12,10 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
 
         <TextView
@@ -104,43 +106,109 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/selectProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
-            android:text="Выберете товар: "
-            android:textSize="30sp" />
+            android:layout_marginTop="180dp"
+            android:text="Выберете товар:"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/product1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="250dp"
+            app:srcCompat="@drawable/vedro" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/costToProduct1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
-            android:text="Ведро"
-            android:textSize="30sp" />
+            android:layout_marginTop="250dp"
+            android:layout_toRightOf="@+id/product1"
+            android:text="цена: 1 ток."
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/minusProduct1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="280dp"
+            android:layout_toRightOf="@+id/product1"
+            android:text="-" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/initialToProduct1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="400dp"
-            android:text="Колесо"
+            android:layout_marginTop="280dp"
+            android:layout_toRightOf="@+id/minusProduct1"
+            android:text="0"
+            android:textColor="@color/colorBlack"
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/plusProduct1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="280dp"
+            android:layout_toRightOf="@+id/initialToProduct1"
+            android:text="+" />
+
+        <ImageView
+            android:id="@+id/product2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="360dp"
+            app:srcCompat="@drawable/koleso" />
+
+        <TextView
+            android:id="@+id/costToProduct2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="500dp"
-            android:text="Сформировать заказ" />
+            android:layout_marginTop="350dp"
+            android:layout_toRightOf="@+id/product2"
+            android:text="цена: 2 ток."
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/minusProduct2"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="380dp"
+            android:layout_toRightOf="@+id/product2"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/initialToProduct2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="250dp"
+            android:layout_marginTop="380dp"
+            android:layout_toRightOf="@+id/minusProduct2"
+            android:text="0"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/plusProduct2"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="380dp"
+            android:layout_toRightOf="@+id/initialToProduct2"
+            android:text="+" />
+
+
+        <Button
+            android:id="@+id/toFormQR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
             android:layout_marginTop="500dp"
-            android:text="Оплатить по QR" />
+            android:text="Cформировать QR" />
+
 
     </RelativeLayout>
 
