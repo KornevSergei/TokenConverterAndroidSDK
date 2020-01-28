@@ -2,6 +2,7 @@ package com.example.tokenconverter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -120,7 +121,12 @@ public class ChoiceActivity extends AppCompatActivity {
 
     }
 
-    public void formQR(View view) {
+    public void toFormQR(View view) {
+            Intent intent = new Intent(ChoiceActivity.this, QRActivity.class);
+            startActivity(intent);
+    }
+
+    public void replenishAccount(View view) {
     }
 }
 

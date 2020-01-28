@@ -87,6 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_toRightOf="@+id/plus"
+            android:onClick="replenishAccount"
             android:text="Пополнить счёт" />
 
         <TextView
@@ -234,6 +235,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="130dp"
             android:layout_marginTop="500dp"
+            android:onClick="toFormQR"
             android:text="Cформировать QR" />
 
         <TextView
@@ -252,7 +254,6 @@
             android:layout_below="@+id/product2"
             android:layout_toRightOf="@+id/tokensForPayment"
             android:text="0"
-            android:onClick="formQR"
             android:textColor="@color/colorBlack"
             android:textSize="20sp" />
 
