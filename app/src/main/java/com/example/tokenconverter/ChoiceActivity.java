@@ -5,13 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ChoiceActivity extends AppCompatActivity {
 
     //значение начальных переменных для кнопок
-    int quantityToken = 0;
-    int quantityOne = 0;
-    int quantityTwo = 0;
+    private int quantityToken = 0;
+    private int quantityOne = 0;
+    private int quantityTwo = 0;
+    private int amount = 1000;
 
 
     @Override
@@ -27,6 +29,8 @@ public class ChoiceActivity extends AppCompatActivity {
         quantityToken++;
         TextView counter1 = findViewById(R.id.initialToConvert);
         counter1.setText("" + quantityToken);
+        //ызываем метод конвертации только на плюс
+        tokenConversion();
     }
 
     // создаём действие кнопки Минус
@@ -38,6 +42,8 @@ public class ChoiceActivity extends AppCompatActivity {
         }
         TextView counter = findViewById(R.id.initialToConvert);
         counter.setText("" + quantityToken);
+
+        tokenConversion();
     }
 
     // создаём действие кнопки Плюс и выводим сразу результат
@@ -83,16 +89,41 @@ public class ChoiceActivity extends AppCompatActivity {
 
     public void orderPrice() {
 //   сразу меняем значение цены при нажатии
-        TextView tokenAmount = findViewById(R.id.tokenAmount);
-        //Приводимс тринг к Инт
-        int a = Integer.parseInt(String.valueOf(quantityOne));
-        int b = Integer.parseInt(String.valueOf(quantityTwo));
-//        tokenAmount.setText("" + quantityOne + "" + quantityTwo);
+        TextView tokenAmount = findViewById(R.id.tokenAmount);//результат
+        //Приводим Стринг к Инт
+        int a = Integer.parseInt(String.valueOf(quantityOne));//начальное значение
+        int b = Integer.parseInt(String.valueOf(quantityTwo));//второе значение
         //считаем сумму и приводим к строке
         tokenAmount.setText("" + (a + (b * 2)));
+    }
 
+
+    //передаём преждварительный результат в токены
+    public void tokenConversion() {
+
+        TextView getInitialTokens = findViewById(R.id.getInitialTokens);
+        //Приводим Стринг к Инт
+        int c = Integer.parseInt(String.valueOf(amount));//начальное значение 1000р
+        int d = Integer.parseInt(String.valueOf(quantityToken));//количетсво введенных токенов
+        if (d * 250 > c) {
+            Toast.makeText(getApplicationContext(), "Недостаточно средств", Toast.LENGTH_SHORT).show();
+        } else {
+            getInitialTokens.setText("" + d);
+        }
+    }
+
+    //получили токены из переведнных средств
+    public void convert(View view) {
+        TextView initialTokens = findViewById(R.id.initialTokens);
+        TextView getInitialTokens = findViewById(R.id.getInitialTokens);
+        initialTokens.setText(getInitialTokens.getText());
 
     }
 
+    public void formQR(View view) {
+    }
 }
+
+
+
 
