@@ -57,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_toRightOf="@+id/convert"
+            android:onClick="decreaseQuantityToken"
             android:text="-" />
 
         <TextView
@@ -75,6 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_toRightOf="@+id/initialToConvert"
+            android:onClick="increaseQuantityToken"
             android:text="+" />
 
         <Button
@@ -110,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="180dp"
-            android:text="Выберете товар:"
+            android:text="Выберите товар:"
             android:textColor="@color/colorBlack"
             android:textSize="20sp" />
 
@@ -137,6 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="280dp"
             android:layout_toRightOf="@+id/product1"
+            android:onClick="decreaseQuantityOne"
             android:text="-" />
 
         <TextView
@@ -155,6 +158,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="280dp"
             android:layout_toRightOf="@+id/initialToProduct1"
+            android:onClick="increaseQuantityOne"
             android:text="+" />
 
         <ImageView
@@ -180,6 +184,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="380dp"
             android:layout_toRightOf="@+id/product2"
+            android:onClick="decreaseQuantityTwo"
             android:text="-" />
 
         <TextView
@@ -198,6 +203,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="380dp"
             android:layout_toRightOf="@+id/initialToProduct2"
+            android:onClick="increaseQuantityTwo"
             android:text="+" />
 
 
@@ -208,6 +214,25 @@
             android:layout_marginLeft="130dp"
             android:layout_marginTop="500dp"
             android:text="Cформировать QR" />
+
+        <TextView
+            android:id="@+id/tokensForPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="460dp"
+            android:text="Токены к оплате: "
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tokenAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="460dp"
+            android:layout_toRightOf="@+id/tokensForPayment"
+            android:text="0"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp" />
 
 
     </RelativeLayout>
