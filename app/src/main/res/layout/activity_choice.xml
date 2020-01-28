@@ -219,7 +219,7 @@
             android:id="@+id/tokensForPayment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="460dp"
+            android:layout_below="@+id/product2"
             android:text="Токены к оплате: "
             android:textColor="@color/colorBlack"
             android:textSize="20sp" />
@@ -228,7 +228,7 @@
             android:id="@+id/tokenAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="460dp"
+            android:layout_below="@+id/product2"
             android:layout_toRightOf="@+id/tokensForPayment"
             android:text="0"
             android:textColor="@color/colorBlack"

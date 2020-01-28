@@ -8,14 +8,20 @@ import android.widget.TextView;
 
 public class ChoiceActivity extends AppCompatActivity {
 
+    //значение начальных переменных для кнопок
     int quantityToken = 0;
     int quantityOne = 0;
     int quantityTwo = 0;
+    //результат
+    TextView tokenAmount;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice);
+
+
     }
 
     // создаём действие кнопки Плюс
@@ -32,8 +38,8 @@ public class ChoiceActivity extends AppCompatActivity {
         if (quantityToken < 0) {
             quantityToken = 0;
         }
-        TextView counter1 = findViewById(R.id.initialToConvert);
-        counter1.setText("" + quantityTwo);
+        TextView counter = findViewById(R.id.initialToConvert);
+        counter.setText("" + quantityToken);
     }
 
     // создаём действие кнопки Плюс и выводим сразу результат
@@ -41,9 +47,8 @@ public class ChoiceActivity extends AppCompatActivity {
         quantityOne++;
         TextView counter1 = findViewById(R.id.initialToProduct1);
         counter1.setText("" + quantityOne);
-        //сразу меняем значение цены при нажатии
-//        TextView priceTextView = findViewById(R.id.tokenAmount);
-//        priceTextView.setText("" + quantityOne * price);
+        //вызываем метод для общей суммы
+        orderPrice();
     }
 
     // создаём действие кнопки Минус и выводим сразу результат
@@ -53,19 +58,18 @@ public class ChoiceActivity extends AppCompatActivity {
         if (quantityOne < 0) {
             quantityOne = 0;
         }
-        TextView counter1 = findViewById(R.id.initialToProduct1);
-        counter1.setText("" + quantityOne);
-        //сразу меняем значение цены при нажатии
-//        TextView priceTextView = findViewById(R.id.tokenAmount);
-//        priceTextView.setText("" + quantityOne * price);
+            TextView counter1 = findViewById(R.id.initialToProduct1);
+            counter1.setText("" + quantityOne);
+            orderPrice();
+        }
 
-    }
+
 
     // создаём действие кнопки Плюс
     public void increaseQuantityTwo(View view) {
         quantityTwo++;
-        TextView counter1 = findViewById(R.id.initialToProduct2);
-        counter1.setText("" + quantityTwo);
+        TextView counter2 = findViewById(R.id.initialToProduct2);
+        counter2.setText("" + quantityTwo);
     }
 
     // создаём действие кнопки Минус
@@ -75,8 +79,15 @@ public class ChoiceActivity extends AppCompatActivity {
         if (quantityTwo < 0) {
             quantityTwo = 0;
         }
-        TextView counter1 = findViewById(R.id.initialToProduct2);
-        counter1.setText("" + quantityTwo);
+        TextView counter2 = findViewById(R.id.initialToProduct2);
+        counter2.setText("" + quantityTwo);
     }
+
+    public void orderPrice() {
+//   сразу меняем значение цены при нажатии
+        TextView tokenAmount = findViewById(R.id.tokenAmount);
+        tokenAmount.setText("" + quantityOne);
+    }
+
 }
 
