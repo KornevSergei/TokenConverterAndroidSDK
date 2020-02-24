@@ -113,7 +113,7 @@ public class ChoiceActivity extends AppCompatActivity {
         }
     }
 
-    //получили токены из переведнных средств
+    //о токены из переведнных средств
     public void convert(View view) {
         TextView initialTokens = findViewById(R.id.initialTokens);
         TextView getInitialTokens = findViewById(R.id.getInitialTokens);
@@ -122,11 +122,13 @@ public class ChoiceActivity extends AppCompatActivity {
     }
 
     public void toFormQR(View view) {
-            Intent intent = new Intent(ChoiceActivity.this, QRActivity.class);
-            startActivity(intent);
+        Intent intent = new Intent(ChoiceActivity.this, QRActivity.class);
+        startActivity(intent);
     }
 
     public void replenishAccount(View view) {
+        Intent intent = new Intent(ChoiceActivity.this, AccountActivity.class);
+        startActivity(intent);
     }
 }
 

@@ -6,34 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="match_parent">
 
 
         <ImageView
-            android:id="@+id/imageToken"
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            app:srcCompat="@drawable/token" />
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/lo" />
 
         <EditText
             android:id="@+id/nameView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="350dp"
+            android:textColorHint="@color/colorGold"
             android:hint="Введите имя Sergei" />
 
         <EditText
             android:id="@+id/passwordView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="450dp"
+            android:textColorHint="@color/colorGold"
             android:hint="Введите пароль 0000" />
 
         <Button
@@ -52,6 +50,6 @@
             android:onClick="signIn"
             android:text="Зарегистрироваться" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

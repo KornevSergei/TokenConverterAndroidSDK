@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ReplenishAccountActivity"></activity>
-        <activity android:name=".QRActivity" />
+        <activity android:name=".QRActivity"></activity>
+        <activity android:name=".AccountActivity" />
+        <activity android:name=".ReplenishAccountActivity" />
         <activity android:name=".ChoiceActivity" />
         <activity android:name=".SignInActivity" />
         <activity android:name=".LoginActivity">

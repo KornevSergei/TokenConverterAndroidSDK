@@ -1,24 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QRActivity">
+    android:background="#ffffff"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="57dp"
-        android:layout_marginLeft="57dp"
-        android:layout_marginTop="117dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginRight="57dp"
-        android:layout_marginBottom="177dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/qrcod" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_gravity="center|top"
+        android:layout_margin="20dp"
+        android:text="Сканер"
+        android:textColor="#000000"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/scanner"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:onClick="scanQR"
+        android:text="QR-код"
+        android:textSize="18dp" >
+    </Button>
+
+    <Button
+        android:id="@+id/scanner2"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:onClick="scanBar"
+        android:text="Штрих код"
+        android:textSize="18dp" >
+    </Button>
+</LinearLayout>
