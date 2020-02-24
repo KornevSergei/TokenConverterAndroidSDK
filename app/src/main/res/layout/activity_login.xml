@@ -22,33 +22,42 @@
             android:id="@+id/nameView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="350dp"
-            android:textColorHint="@color/colorGold"
-            android:hint="Введите имя Sergei" />
+            android:layout_marginTop="370dp"
+            android:gravity="center"
+            android:hint="Введите имя Sergei"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorYellow" />
 
         <EditText
             android:id="@+id/passwordView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="450dp"
-            android:textColorHint="@color/colorGold"
-            android:hint="Введите пароль 0000" />
+            android:layout_marginTop="412dp"
+            android:gravity="center"
+            android:hint="Введите пароль 0000"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorYellow" />
 
-        <Button
+
+        <ImageView
             android:id="@+id/toComeIn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="550dp"
             android:onClick="login"
-            android:text="Войти" />
+            app:srcCompat="@drawable/avt" />
 
-        <Button
+
+        <ImageView
             android:id="@+id/signUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="550dp"
             android:onClick="signIn"
-            android:text="Зарегистрироваться" />
+            app:srcCompat="@drawable/reg" />
+
 
     </RelativeLayout>
 

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -16,8 +18,8 @@ public class LoginActivity extends AppCompatActivity {
     //обьявляем переменные
     private EditText username;
     private EditText password;
-    private Button login;
-    private Button signIn;
+    private ImageView login;
+    private ImageView signIn;
 
 
     @Override
