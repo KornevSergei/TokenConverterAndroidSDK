@@ -15,9 +15,8 @@ public class SignInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
     }
 
-
     //описываем кнопу Регистрации
-    public void signIn(View view){
+    public void signIn(View view) {
         Toast.makeText(getApplicationContext(), "В данный момент регистрация недоступна!", Toast.LENGTH_SHORT).show();
     }
 }

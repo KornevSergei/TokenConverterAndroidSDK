@@ -7,26 +7,54 @@
     tools:context=".AccountActivity">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:background="@color/colorBlack">
+
+        <EditText
+            android:id="@+id/numberView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Номер карты"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorYellow" />
+
+        <EditText
+            android:id="@+id/dataView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/numberView"
+            android:hint="Срок действия"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorYellow"/>
+
+        <EditText
+            android:id="@+id/cvcView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dataView"
+            android:hint="CVC"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorYellow"/>
 
         <EditText
             android:id="@+id/nameView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="Введите номер карты" />
-
-        <EditText
-            android:id="@+id/passwordView"
+            android:layout_below="@+id/cvcView"
+            android:hint="Имя и Фамилия"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorYellow"/>
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="Подтвердите пароль" />
-    </LinearLayout>
+            android:layout_below="@+id/nameView"
+            android:background="@color/colorYellow"
+            android:text="Потдвердить по смс"
+            />
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

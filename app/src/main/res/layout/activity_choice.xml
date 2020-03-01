@@ -10,6 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Сумма на счету: "
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="20sp" />
 
         <TextView
@@ -33,7 +34,7 @@
             android:layout_marginLeft="1dp"
             android:layout_toRightOf="@+id/amountInTheAccount"
             android:text="1000"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="20sp" />
 
         <TextView
@@ -42,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/amount"
             android:text=" Руб."
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="20sp" />
 
         <Button
@@ -50,15 +51,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:background="@color/colorYellow"
             android:onClick="convert"
-            android:text="Конвертировать" />
+            android:text="  Конвертировать  " />
 
         <Button
             android:id="@+id/minus"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:layout_marginLeft="50dp"
             android:layout_toRightOf="@+id/convert"
+            android:background="@color/colorYellow"
             android:onClick="decreaseQuantityToken"
             android:text="-" />
 
@@ -69,7 +73,7 @@
             android:layout_marginTop="40dp"
             android:layout_toRightOf="@+id/minus"
             android:text="0"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="30sp" />
 
         <Button
@@ -78,17 +82,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_toRightOf="@+id/initialToConvert"
+            android:background="@color/colorYellow"
             android:onClick="increaseQuantityToken"
             android:text="+" />
 
-        <Button
-            android:id="@+id/replenishAccount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_toRightOf="@+id/plus"
-            android:onClick="replenishAccount"
-            android:text="Пополнить счёт" />
+
 
         <TextView
             android:id="@+id/getTokens"
@@ -96,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:text="Получить токенов: "
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="20sp" />
 
         <TextView
@@ -106,7 +104,7 @@
             android:layout_marginTop="100dp"
             android:layout_toRightOf="@+id/getTokens"
             android:text="0"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="20sp" />
 
 
@@ -116,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
             android:text="Токены на счету: "
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="20sp" />
 
         <TextView
@@ -126,16 +124,16 @@
             android:layout_marginTop="150dp"
             android:layout_toRightOf="@+id/tokensInTheAccount"
             android:text="0"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/selectProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="220dp"
             android:text="Выберите товар:"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="20sp" />
 
         <ImageView
@@ -143,7 +141,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="250dp"
-            app:srcCompat="@drawable/vedro" />
+            app:srcCompat="@drawable/capa" />
 
         <TextView
             android:id="@+id/costToProduct1"
@@ -152,7 +150,7 @@
             android:layout_marginTop="250dp"
             android:layout_toRightOf="@+id/product1"
             android:text="цена: 1 ток."
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="15sp" />
 
         <Button
@@ -161,6 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="280dp"
             android:layout_toRightOf="@+id/product1"
+            android:background="@color/colorYellow"
             android:onClick="decreaseQuantityOne"
             android:text="-" />
 
@@ -171,7 +170,7 @@
             android:layout_marginTop="280dp"
             android:layout_toRightOf="@+id/minusProduct1"
             android:text="0"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="30sp" />
 
         <Button
@@ -180,6 +179,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="280dp"
             android:layout_toRightOf="@+id/initialToProduct1"
+            android:background="@color/colorYellow"
             android:onClick="increaseQuantityOne"
             android:text="+" />
 
@@ -188,7 +188,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="360dp"
-            app:srcCompat="@drawable/koleso" />
+            app:srcCompat="@drawable/capb" />
 
         <TextView
             android:id="@+id/costToProduct2"
@@ -197,7 +197,7 @@
             android:layout_marginTop="350dp"
             android:layout_toRightOf="@+id/product2"
             android:text="цена: 2 ток."
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="15sp" />
 
         <Button
@@ -206,6 +206,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="380dp"
             android:layout_toRightOf="@+id/product2"
+            android:background="@color/colorYellow"
             android:onClick="decreaseQuantityTwo"
             android:text="-" />
 
@@ -216,7 +217,7 @@
             android:layout_marginTop="380dp"
             android:layout_toRightOf="@+id/minusProduct2"
             android:text="0"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="30sp" />
 
         <Button
@@ -225,18 +226,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="380dp"
             android:layout_toRightOf="@+id/initialToProduct2"
+            android:background="@color/colorYellow"
             android:onClick="increaseQuantityTwo"
             android:text="+" />
 
-
-        <Button
-            android:id="@+id/toFormQR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="130dp"
-            android:layout_marginTop="500dp"
-            android:onClick="toFormQR"
-            android:text="Cформировать QR" />
 
         <TextView
             android:id="@+id/tokensForPayment"
@@ -244,7 +237,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/product2"
             android:text="Токены к оплате: "
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="20sp" />
 
         <TextView
@@ -254,8 +247,29 @@
             android:layout_below="@+id/product2"
             android:layout_toRightOf="@+id/tokensForPayment"
             android:text="0"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorYellow"
             android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/toFormQR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="500dp"
+            android:background="@color/colorYellow"
+            android:onClick="toFormQR"
+            android:text="  Cформировать QR  " />
+
+        <Button
+            android:id="@+id/replenishAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/toFormQR"
+            android:layout_marginTop="500dp"
+            android:background="@color/colorYellow"
+            android:onClick="replenishAccount"
+            android:text="  Пополнить счёт  " />
 
 
     </RelativeLayout>
