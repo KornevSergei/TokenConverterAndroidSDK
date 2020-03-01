@@ -15,11 +15,6 @@ public class SignInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
     }
 
-    //опписываем кнопку Назад
-    public void back(View view){
-        Intent intent = new Intent(SignInActivity.this, LoginActivity.class);
-        startActivity(intent);
-    }
 
     //описываем кнопу Регистрации
     public void signIn(View view){

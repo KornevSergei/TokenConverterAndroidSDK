@@ -6,59 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="match_parent">
 
 
         <ImageView
-            android:id="@+id/imageToken"
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            app:srcCompat="@drawable/token" />
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/lob" />
 
         <EditText
             android:id="@+id/nameView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="Введите имя" />
+            android:layout_marginTop="370dp"
+            android:gravity="center"
+            android:hint="Введите имя"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorYellow" />
+
 
         <EditText
             android:id="@+id/passwordView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="Введите пароль" />
+            android:layout_marginTop="412dp"
+            android:gravity="center"
+            android:hint="Введите пароль"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorYellow" />
 
         <EditText
             android:id="@+id/passwordAgainView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="Подтвердите пароль" />
+            android:layout_marginTop="453dp"
+            android:gravity="center"
+            android:hint="Подтвердите пароль"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorYellow" />
 
-        <Button
-            android:id="@+id/toBack"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/telephoneView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:onClick="back"
-            android:text="Назад" />
+            android:layout_marginTop="494dp"
+            android:gravity="center"
+            android:hint="Введите телефон"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorYellow" />
 
-        <Button
+
+
+        <ImageView
             android:id="@+id/signUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="550dp"
             android:onClick="signIn"
-            android:text="Зарегистрироваться" />
+            app:srcCompat="@drawable/reg" />
 
-    </LinearLayout>
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
